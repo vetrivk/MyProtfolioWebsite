@@ -3,141 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taxi Service Packages</title>
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <title>MessageBird Popup Integration</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Include the MessageBird embeddable script -->
+    <script
+      defer
+      type="module"
+      src="https://embeddables.p.mbirdcdn.net/v1/web-components.es.js"
+    ></script>
     <style>
       body {
         font-family: Arial, sans-serif;
-        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
-      .pricing-table {
-        margin-top: 50px;
-      }
-      .package-title {
-        font-size: 24px;
-        margin-bottom: 20px;
-        text-transform: uppercase;
-        color: #343a40;
-      }
-      .pricing-table th,
-      .pricing-table td {
-        text-align: center;
-        padding: 15px;
-        border: 1px solid #dee2e6;
-      }
-      .pricing-table th {
-        background-color: #343a40;
+
+      header {
+        background-color: #4caf50;
         color: white;
-      }
-      .pricing-table tbody tr:nth-child(even) {
-        background-color: #e9ecef;
-      }
-      .footer {
-        margin-top: 50px;
+        padding: 15px;
         text-align: center;
-        color: #6c757d;
+      }
+
+      main {
+        flex: 1;
+        padding: 20px;
+        text-align: center;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1 class="text-center mt-5">Our Taxi Service Packages</h1>
+    <header>
+      <h1>Welcome to Our Website</h1>
+    </header>
 
-      <div class="row pricing-table">
-        <div class="col-md-12">
-          <h2 class="package-title">Package 1</h2>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Distance (KM)</th>
-                <th>Free Hours</th>
-                <th>Indica / Swift / Etios</th>
-                <th>Tavera / Xylo</th>
-                <th>Innova</th>
-                <th>Tempo</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>100</td>
-                <td>5</td>
-                <td>₹1,400</td>
-                <td>₹1,800</td>
-                <td>₹2,000</td>
-                <td>₹2,200</td>
-              </tr>
-              <tr>
-                <td>Extra Hours</td>
-                <td>-</td>
-                <td>₹80/hour</td>
-                <td>₹90/hour</td>
-                <td>₹110/hour</td>
-                <td>₹130/hour</td>
-              </tr>
-              <tr>
-                <td>Extra KM</td>
-                <td>-</td>
-                <td>₹14/km</td>
-                <td>₹16/km</td>
-                <td>₹17/km</td>
-                <td>₹20/km</td>
-              </tr>
-              <tr>
-                <td>AC Extra</td>
-                <td colspan="5">₹1/km</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+    <!-- MessageBird Popup -->
+    <messagebird-popup
+      project-id="cb066fef-d274-4e87-a47e-56d83ef95dd5"
+      workspace-id="01df8c02-630b-4629-bf7b-296756455320"
+    ></messagebird-popup>
 
-      <div class="row pricing-table">
-        <div class="col-md-12">
-          <h2 class="package-title">Package 2</h2>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Indica / Swift / Etios</th>
-                <th>Tavera / Xylo</th>
-                <th>Innova</th>
-                <th>Tempo</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Day Rent</td>
-                <td>₹1,600</td>
-                <td>₹1,900</td>
-                <td>₹2,200</td>
-                <td>₹3,700</td>
-              </tr>
-              <tr>
-                <td>Extra KM</td>
-                <td>₹9/km</td>
-                <td>₹12/km</td>
-                <td>₹12/km</td>
-                <td>₹17/km</td>
-              </tr>
-              <tr>
-                <td>AC Extra</td>
-                <td colspan="4">₹1/km</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+    <main>
+      <p>
+        Explore our features and services. If you need help, use the chat button
+        below!
+      </p>
+    </main>
 
-      <div class="footer">
-        <p>&copy; 2024 Your Taxi Service Name. All Rights Reserved.</p>
-      </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer>
+      <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
   </body>
 </html>
